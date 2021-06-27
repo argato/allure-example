@@ -31,8 +31,8 @@ public class ManualTest {
   @Microservice("Billing")
   public void manualTestFromAllureSecondImport() {
     step("My scenario step 1");
-    step("My scenario step 2");
-    step("My scenario step 3");
-    step("My scenario step 4");
+    step("My changed scenario step 2");
+    step("My changed scenario step 3");
+    step("My changed scenario step 4");
   }
 }
