@@ -54,6 +54,33 @@ public class PullRequestsWebTest {
         steps.shouldNotSeePullRequestForBranch(BRANCH);
     }
 
+    @Test
+    @TM4J("AE-T6")
+    @Microservice("Billing")
+    @Story("Not for import to Allure. Create new pull request")
+    @Tags({@Tag("web"), @Tag("regress"), @Tag("smoke")})
+    @JiraIssues({@JiraIssue("AE-1"), @JiraIssue("AE-2")})
+    @DisplayName("Not for import to Allure. Creating new issue for authorized user")
+    public void shouldCreatedPullRequest() {
+        steps.openPullRequestsPage(OWNER, REPO);
+        steps.createPullRequestFromBranch(BRANCH);
+        steps.shouldSeePullRequestForBranch(BRANCH);
+    }
+
+    @Test
+    @TM4J("AE-T7")
+    @JiraIssue("AE-2")
+    @Microservice("Repository")
+    @Story("Not for import to Allure. Close existing pull request")
+    @Tags({@Tag("web"), @Tag("regress")})
+    @DisplayName("Not for import to Allure. Deleting existing issue for authorized user")
+    public void shouldClosedPullRequest() {
+        steps.openPullRequestsPage(OWNER, REPO);
+        steps.createPullRequestFromBranch(BRANCH);
+        steps.closePullRequestForBranch(BRANCH);
+        steps.shouldNotSeePullRequestForBranch(BRANCH);
+    }
+
     @AfterEach
     public void stopDriver() {
         steps.stopDriver();
