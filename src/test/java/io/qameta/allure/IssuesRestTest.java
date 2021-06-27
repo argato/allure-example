@@ -9,6 +9,7 @@ import static io.qameta.allure.Allure.parameter;
 
 @Layer("rest")
 @Owner("ivanov")
+@Epic("Epic 1")
 @Feature("Issues")
 public class IssuesRestTest {
 

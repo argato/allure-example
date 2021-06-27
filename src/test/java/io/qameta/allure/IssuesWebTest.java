@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
  */
 @Layer("web")
 @Owner("anovikova")
+@Epic("Epic 2")
 @Feature("Issues")
 public class IssuesWebTest {
 

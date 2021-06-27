@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
  */
 @Layer("web")
 @Owner("anovikova")
+@Epic("Epic 3")
 @Feature("Pull Requests")
 public class PullRequestsWebTest {
 
