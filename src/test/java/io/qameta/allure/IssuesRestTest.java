@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static io.qameta.allure.Allure.parameter;
 
 @Layer("rest")
-@Owner("baev")
+@Owner("ivanov")
 @Feature("Issues")
 public class IssuesRestTest {
 
