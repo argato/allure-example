@@ -1,6 +1,8 @@
 package io.qameta.allure.hw23;
 
 import io.qameta.allure.Feature;
+import io.qameta.allure.Layer;
+import io.qameta.allure.Microservice;
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
@@ -34,7 +36,6 @@ public @interface AllureFeatures {
 
   }
 
-
   @Documented
   @Inherited
   @Retention(RetentionPolicy.RUNTIME)
@@ -44,6 +45,19 @@ public @interface AllureFeatures {
   @AutoMember("sidorov")
   @ManualMember("sidorov")
   @interface Milestones {
+
+  }
+
+  @Documented
+  @Inherited
+  @Retention(RetentionPolicy.RUNTIME)
+  @Target({ElementType.METHOD, ElementType.TYPE})
+  @Feature("Incidents")
+  @Layer("web")
+  @Microservice("playbook")
+  @AutoMember("kirov")
+  @ManualMember("sidorov")
+  @interface WithLayerAndMicroservice {
 
   }
 }

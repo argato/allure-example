@@ -1,6 +1,7 @@
 package io.qameta.allure.hw23;
 
 import io.qameta.allure.Allure;
+import io.qameta.allure.TM4J;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -51,6 +52,22 @@ public class RegionTest {
   @Tags({@Tag("critical"), @Tag("web")})
   @DisplayName("Проверка работы Tags")
   public void testBigAnnotation() {
+    assert true;
+  }
+
+  @Test
+  @AllureFeatures.WithLayerAndMicroservice
+  @DisplayName("Проверка работы WithLayerAndMicroservice")
+  public void testHw23() {
+    assert true;
+  }
+
+  @Test
+  @TM4J("HOM-158")
+  @AllureFeatures.PullRequests
+  @Tags({@Tag("critical"), @Tag("web")})
+  @DisplayName("Проверка работы с jira")
+  public void testJira() {
     assert true;
   }
 }
