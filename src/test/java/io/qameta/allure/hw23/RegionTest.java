@@ -70,4 +70,13 @@ public class RegionTest {
   public void testJira() {
     assert true;
   }
+
+  @Test
+  @TM4J("AUTO-293")
+  @AllureFeatures.PullRequests
+  @Tags({@Tag("critical"), @Tag("web")})
+  @DisplayName("Проверка работы с jira проект Test automation as a Service")
+  public void testJiraVersion2() {
+    assert true;
+  }
 }
